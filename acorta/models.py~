@@ -1,0 +1,7 @@
+from django.db import models
+
+# Create your models here.
+class datos(models.Model):
+    numero = models.PositiveIntegerField()
+    acortada = models.CharField(max_length=32)
+    url= models.CharField(max_length=32)
