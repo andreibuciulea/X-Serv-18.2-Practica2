@@ -1,0 +1,14 @@
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+
+urlpatterns = patterns('',
+    # Examples:
+    url(r'^$', 'acorta.views.form'),	
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^(.*)$', 'acorta.views.acortar'),
+)
+
+
+
+# si me piden / con un get les doy el formulario
+# si me piden /algo les doy la url y lo guardo en la base de datos
